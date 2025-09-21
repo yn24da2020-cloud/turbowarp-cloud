@@ -1,6 +1,6 @@
 const WebSocket = require('ws');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 const wss = new WebSocket.Server({ port: PORT });
 
 const cloudVars = {}; // プロジェクトごとのクラウド変数保存用
@@ -30,3 +30,4 @@ wss.on('connection', ws => {
 });
 
 console.log(`Server running on port ${PORT}`);
+
